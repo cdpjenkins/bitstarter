@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
     var buf = fs.readFileSync('index.html');
-    response.write(buf)
+    response.send(buf.toString())
 //  response.send('Hello World 2!');
 });
 
